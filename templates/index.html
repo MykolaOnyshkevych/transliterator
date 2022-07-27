@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transliterator</title>
+</head>
+<body>
+    <form action="ukrainian" method="post">
+        <input type="text" name="message" placeholder="paste your text"/>
+        <br>
+        <button class="btn btn-primary custom">Ukrainian</button>
+    </form>
+    <form action="english" method="post">
+         <input type="text" name="message" placeholder="paste your text"/>
+        <br>
+        <button class="btn btn-primary custom">English</button>
+    </form>
+    <form action="both" method="post">
+        <input type="text" name="message" placeholder="paste your text"/>
+        <br>
+        <button class="btn btn-primary custom">Both</button>
+    </form>
+    {%if answer%}
+        <p>Answer:{{answer}}</p>
+    {%endif%}
+</body>
+</html>
