@@ -3,25 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Transliterator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel= "stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<div class="container">
+    <div class="main_text">
+        <h1>Transliterator</h1>
+        <hr>
+        <p>Wrote a lot of text but forgot to switch the language on the keyboard?
+            This is not a problem. Insert the text in the required field and translations :)</p>
+    </div>
+
+    <div class="forms">
     <form action="ukrainian" method="post">
-        <input type="text" name="message" placeholder="paste your text"/>
+        <input type="text" name="message" placeholder="Paste your text"/>
         <br>
-        <button class="btn btn-primary custom">Ukrainian</button>
+        <button class="btn btn-primary custom">Make English</button>
     </form>
     <form action="english" method="post">
-         <input type="text" name="message" placeholder="paste your text"/>
+         <input type="text" name="message" placeholder="Paste your text"/>
         <br>
-        <button class="btn btn-primary custom">English</button>
+        <button class="btn btn-primary custom">Make Ukrainian</button>
     </form>
     <form action="both" method="post">
-        <input type="text" name="message" placeholder="paste your text"/>
+        <input type="text" name="message" placeholder="Paste your text"/>
         <br>
         <button class="btn btn-primary custom">Both</button>
     </form>
+    </div>
+    <div class="answer">
     {%if answer%}
-        <p>Answer:{{answer}}</p>
+        <h6>{{answer}}</h6>
     {%endif%}
+    </div>
+</div>
 </body>
 </html>
