@@ -40,16 +40,18 @@ def match(message, alphabet):
     return not alphabet.isdisjoint(message.lower())
 
 
-def ukrainizator(message):
+def ukrainizator(me):
     x = english.__str__()
     y = ukrainian.__str__()
+    message = me.lower()
     my_table = message.maketrans(y, x)
     return message.translate(my_table)
 
 
-def englishyzator(message):
+def englishyzator(me):
     x = english.__str__()
     y = ukrainian.__str__()
+    message = me.lower()
     my_table = message.maketrans(x, y)
     return message.translate(my_table)
 
@@ -58,7 +60,7 @@ def both(message):
     x = english.__str__()
     y = ukrainian.__str__()
     new_mess = ""
-    for i in message:
+    for i in message.lower():
         if match(i, set(ukrainian)):
             my_table = i.maketrans(y, x)
             o = i.translate(my_table)
