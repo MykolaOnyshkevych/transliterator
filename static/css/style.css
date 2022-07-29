@@ -163,9 +163,15 @@ justify-content: center;
   margin-left:auto}
   .container{
   justify-content:center
-  width:60%}
+  width:60%
+  height:40%}
 
   .main_text{
+    height: 20%;
   margin-bottom:10%
   }
+  .answer{
+    height: 10%;
+    margin-bottom:auto;
+    }
 }
